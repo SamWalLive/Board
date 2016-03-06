@@ -27,4 +27,5 @@ public class PlayerMovement : MonoBehaviour {
             rb.transform.Translate(1, 0, 0);
         }
 	}
+
 }
