@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ClickController : MonoBehaviour {
 
-    public GameObject particle;
+    public GameObject placement;
 
     void Update()
     {
@@ -12,7 +12,7 @@ public class ClickController : MonoBehaviour {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
-                Instantiate(particle, hit.point, transform.rotation);
+                Instantiate(placement, hit.point, transform.rotation);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject template;
+    public GameObject[] templates;
 
 	void Start ()
     {
@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
         {
             for (int x = -4; x <= 5; x++)
             {
-                Instantiate(template, new Vector3(x, y, 0), Quaternion.identity);
+                Instantiate(templates[Random.Range(0, templates.Length)], new Vector3(x, y, 0), Quaternion.identity);
             }
         }
 	}
